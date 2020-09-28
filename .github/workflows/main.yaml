@@ -32,8 +32,10 @@ jobs:
             -   name: Run Tests
                 run: yarn run ng test --watch=false --browsers=ChromeHeadlessCustom
             -   name: Build
+                if: startsWith(github.ref, 'refs/tags/')
                 run: yarn run ng build --prod
             -   name: Archive build
+                if: startsWith(github.ref, 'refs/tags/')
                 uses: actions/upload-artifact@v1
                 with:
                     name: deploy_dist
@@ -41,6 +43,7 @@ jobs:
     deploy:
         needs: testandbuild
         runs-on: ubuntu-latest
+        if: startsWith(github.ref, 'refs/tags/')
         steps:
             -   name: Download build
                 uses: actions/download-artifact@v2
