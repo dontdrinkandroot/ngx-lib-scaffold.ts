@@ -59,7 +59,7 @@ jobs:
             -   name: Set version
                 env:
                     RELEASE_VERSION: ${{ github.event.release.tag_name }}
-                run: npm version --git-tag-version=false from-git
+                run: npm version --git-tag-version=false $RELEASE_VERSION
             -   name: Publish
                 env:
                     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
