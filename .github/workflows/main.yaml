@@ -56,14 +56,11 @@ jobs:
                 with:
                     name: deploy_dist
                     path: .
-            -   name: List directory contents
-                run: ls -la
             -   name: Set version
                 env:
                     RELEASE_VERSION: ${{ github.event.release.tag_name }}
-                run: npm version --git-tag-version=false RELEASE_VERSION
+                run: npm version --git-tag-version=false from-git
             -   name: Publish
                 env:
                     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
                 run: npm publish --access public
-
