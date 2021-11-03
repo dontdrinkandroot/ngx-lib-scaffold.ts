@@ -1,24 +1,35 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
     "compileOnSave": false,
     "compilerOptions": {
         "baseUrl": "./",
         "outDir": "./dist/out-tsc",
+        "paths": {
+            "dontdrinkandroot-ngx-lib-scaffold": [
+                "dist/"
+            ]
+        },
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
         "sourceMap": true,
         "declaration": false,
         "downlevelIteration": true,
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "importHelpers": true,
-        "target": "es2015",
+        "target": "es2017",
         "module": "es2020",
         "lib": [
             "es2018",
             "dom"
-        ],
-        "paths": {
-            "ngx-lib-scaffold": [
-                "dist"
-            ]
-        }
+        ]
+    },
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
     }
 }
