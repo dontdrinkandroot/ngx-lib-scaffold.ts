@@ -13,7 +13,7 @@
         "sourceMap": true,
         "paths": {
             "dontdrinkandroot-ngx-lib-scaffold": [
-                "dist/"
+                "dist"
             ]
         },
         "declaration": false,
