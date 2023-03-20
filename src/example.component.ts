@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'ddr-ngx-lib-scaffold',
@@ -9,13 +9,7 @@ import {Component, OnInit} from '@angular/core';
     `,
     styles: []
 })
-export class ExampleComponent implements OnInit
+export class ExampleComponent
 {
-    constructor()
-    {
-    }
 
-    ngOnInit(): void
-    {
-    }
 }

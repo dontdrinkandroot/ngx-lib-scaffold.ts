@@ -10,9 +10,7 @@ describe('ExampleComponent', () => {
             declarations: [ExampleComponent]
         })
             .compileComponents();
-    });
 
-    beforeEach(() => {
         fixture = TestBed.createComponent(ExampleComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
