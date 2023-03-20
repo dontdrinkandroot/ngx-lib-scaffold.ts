@@ -13,10 +13,10 @@ jobs:
         steps:
             -   name: Checkout
                 uses: actions/checkout@v2
-            -   name: Use Node 14.x
+            -   name: Use Node 18.x
                 uses: actions/setup-node@v1
                 with:
-                    node-version: '14.x'
+                    node-version: '18.x'
             -   name: Get yarn cache directory path
                 id: yarn-cache-dir-path
                 run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -31,7 +31,7 @@ jobs:
             -   name: Install dependencies
                 run: yarn install
             -   name: Run Tests
-                run: yarn run ng test --watch=false --browsers=ChromeHeadlessCustom
+                run: yarn run ng test --watch=false
             -   name: Build
                 if: github.event_name == 'release' && github.event.action == 'published'
                 run: yarn run ng build --prod
@@ -46,10 +46,10 @@ jobs:
         runs-on: ubuntu-latest
         if: github.event_name == 'release' && github.event.action == 'published'
         steps:
-            -   name: Use Node 14.x
+            -   name: Use Node 18.x
                 uses: actions/setup-node@v1
                 with:
-                    node-version: '14.x'
+                    node-version: '18.x'
                     registry-url: 'https://registry.npmjs.org'
             -   name: Download build
                 uses: actions/download-artifact@v2
