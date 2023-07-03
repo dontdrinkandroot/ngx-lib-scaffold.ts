@@ -4,11 +4,6 @@
     "compilerOptions": {
         "baseUrl": "./",
         "outDir": "./dist/out-tsc",
-        "paths": {
-            "dontdrinkandroot-ngx-lib-scaffold": [
-                "dist"
-            ]
-        },
         "forceConsistentCasingInFileNames": true,
         "strict": true,
         "noImplicitOverride": true,
@@ -16,6 +11,11 @@
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
         "sourceMap": true,
+        "paths": {
+            "dontdrinkandroot-ngx-lib-scaffold": [
+                "dist"
+            ]
+        },
         "declaration": false,
         "downlevelIteration": true,
         "experimentalDecorators": true,
