@@ -9,7 +9,10 @@
         "test": "ng test",
         "lint": "ng lint"
     },
-    "peerDependencies": {},
+    "peerDependencies": {
+        "@angular/common": "^17.3.8",
+        "@angular/core": "^17.3.8"
+    },
     "dependencies": {
         "tslib": "^2.3.0"
     },
