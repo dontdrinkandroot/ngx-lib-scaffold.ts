@@ -4,4 +4,3 @@
 
 export * from './src/example.service';
 export * from './src/example.component';
-export * from './src/example.module';
